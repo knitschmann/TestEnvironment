@@ -3,8 +3,6 @@
  */
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
@@ -12,7 +10,7 @@ public class DBMetaData {
     public static void main(String[] args) throws Exception {
         FileInputStream fin = null;
         Properties prop = new Properties();
-        fin = new FileInputStream("MyJDBC/dbconnect.properties");
+        fin = new FileInputStream("dbconnect.properties");
         prop.load(fin);
         fin.close();
 
@@ -48,9 +46,14 @@ public class DBMetaData {
 
             );
         }
-        rs.close();
+        closeAll(con, st, rs);
+    }
+
+	private static void closeAll(Connection con, Statement st, ResultSet rs)
+			throws SQLException {
+		rs.close();
         st.close();
         con.close();
-    }
+	}
 }
 
