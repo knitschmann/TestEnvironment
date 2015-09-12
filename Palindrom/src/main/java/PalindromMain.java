@@ -7,7 +7,7 @@ public class PalindromMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
-            System.out.println(checkPalindromeRecursive(scanner.next()));
+            System.out.println(checkPalindromeIterativeVanilla(scanner.next()));
         }
     }
 
@@ -42,6 +42,22 @@ public class PalindromMain {
         } else {
             return false;
         }
+    }
+
+    public static boolean checkPalindromeIterativeVanilla(String input) {
+        int j = input.length();
+        for (int i = 0; i < input.length(); i++) {
+            j--;
+            if (j <= i) {
+                break;
+            }
+            char front = input.charAt(i);
+            char back = input.charAt(j);
+            if (!(front == back)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
