@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Stack;
 
 /**
@@ -6,11 +8,11 @@ import java.util.Stack;
 public class CollectionTypes {
 
     static Stack myStapel = new Stack();
-    static Queue
 
     public static void main(String args[]){
         CollectionTypes col = new CollectionTypes();
-        col.runIt();
+//        col.runIt();
+        col.hashDifferences();
     }
     public CollectionTypes() {
     }
@@ -20,5 +22,19 @@ public class CollectionTypes {
         myStapel.peek();
         myStapel.pop();
 
+    }
+
+    void hashDifferences(){
+        Hashtable<String,String> hashtableobj = new Hashtable<String, String>();
+        hashtableobj.put("Alive is ", "awesome");
+        hashtableobj.put("Love", "yourself");
+        System.out.println("Hashtable object output :"+ hashtableobj);
+
+
+
+        HashMap hashmapobj = new HashMap();
+        hashmapobj.put("Alive is ", "awesome");
+        hashmapobj.put("Love", "yourself");
+        System.out.println("HashMap object output :"+hashmapobj);
     }
 }
