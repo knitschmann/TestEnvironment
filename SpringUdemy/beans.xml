@@ -6,6 +6,11 @@
        <bean id="person" class ="Person">
               <constructor-arg name="id" value="777"></constructor-arg>
               <constructor-arg name="name" value="Mary"></constructor-arg>
-              <property name="taxId" value="123"></property>
+
+              <!-- <property name="taxId" value="123"></property> -->
+              <property name="taxId">
+                     <value>12345</value>
+              </property>
+
        </bean>
 </beans>
