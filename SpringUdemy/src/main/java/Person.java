@@ -55,7 +55,14 @@ public class Person {
                 '}';
     }
 
-    public void speak(){
-        System.out.println("Hello, I am a Java Bean POJO Person");
+    /**
+     * every spring bean also has a onCreate and onDestroy method
+     * to be set in the beans.xml as init-method="" and destroy-method=""
+     */
+    public void onCreate(){
+        System.out.println("Person created");
+    }
+    public void onDestroy(){
+        System.out.println("Person destroyed");
     }
 }

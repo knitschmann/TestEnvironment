@@ -3,7 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       <bean id="person" class ="Person">
+       <!-- scope singleton ist standard dh jede person referenziert auf das gleiche bean objekt und alle haben die selben werte -->
+       <bean id="person" class ="Person" scope="prototype" init-method="onCreate" destroy-method="onDestroy">
               <constructor-arg name="id" value="777"></constructor-arg>
               <constructor-arg name="name" value="Mary"></constructor-arg>
 

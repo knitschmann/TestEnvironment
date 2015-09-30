@@ -9,7 +9,6 @@ public class App {
 
         ApplicationContext context = new FileSystemXmlApplicationContext("/SpringUdemy/beans.xml");
         Person person = (Person) context.getBean("person");
-        person.speak();
         System.out.println(person.toString());
         ((FileSystemXmlApplicationContext)context).close();
 
