@@ -4,13 +4,23 @@ import java.util.Scanner;
  * Created by kevin on 11/06/15.
  */
 public class PalindromMain {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()) {
-            System.out.println(checkPalindromeIterativeVanilla(scanner.next()));
-        }
-    }
+    	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNext()) {
+			//System.out.println(checkPalindromeIterativeVanilla(scanner.next()));
+			System.out.println(showLongestPalindrome(scanner.next()));
+		}
+	}
 
+	public static String showLongestPalindrome(String input){
+		for (int i = 0; i < input.length(); i++) {
+			String toCheck = input.substring(i, input.length()-i);
+			if(checkPalindromeRecursive(toCheck)){
+				return toCheck;
+			}
+		}	
+		return null;
+	}
     public static boolean checkPalindromeRecursive(String input) {
         if (input.length() > 1) {
 
