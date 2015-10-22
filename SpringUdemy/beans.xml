@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <!-- scope singleton ist standard dh jede person referenziert auf das gleiche bean objekt und alle haben die selben werte -->
-       <bean id="person" class ="Person" scope="prototype" init-method="onCreate" destroy-method="onDestroy">
+       <bean id="Person" class ="Person" scope="prototype" init-method="onCreate" destroy-method="onDestroy" autowire="byName">
               <constructor-arg name="id" value="777"></constructor-arg>
               <constructor-arg name="name" value="Mary"></constructor-arg>
 
