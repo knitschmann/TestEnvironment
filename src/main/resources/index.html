@@ -1,0 +1,35 @@
+<html><head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<form action="demo_form.asp">
+    Name: <input type="text" id="lname"><br>
+    <input type="submit" value="Submit" id="submitButton">
+</form>
+
+<script>
+
+    $.postJSON = function(url, data, callback) {
+    return jQuery.ajax({
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    'type': 'POST',
+    'url': url,
+    'data': JSON.stringify(data),
+    'dataType': 'json',
+    'success': callback
+    });
+};
+function getName(){
+    return lname.value;
+}
+$('#submitButton').on('click', function (e) {
+    $.postJSON( "/testbtnclick", getName(),function( data ) {
+    console.log(data);
+    });
+});
+</script>
+</body>
+</html>
