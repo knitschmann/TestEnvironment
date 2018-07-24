@@ -1,0 +1,38 @@
+<ANDMeldung VerfallZst="9999-12-31T22:59:59" Zst="2016-06-21T11:11:50+02:00">
+    <KanalID>1</KanalID>
+    <MeldungsID>BVG100086</MeldungsID>
+    <FormatID>XML</FormatID>
+    <XML>
+        <OEV_MESSAGE>
+            <MeldungsId>BVG100086</MeldungsId>
+            <VerbundeneMeldungen>
+                <VMeldungsId></VMeldungsId>
+
+            </VerbundeneMeldungen>
+            <Datum>2016-06-21T11:11:50+02:00</Datum>
+            <Verkehrsmittel>1</Verkehrsmittel>
+            <Linie>112</Linie>
+
+            <RichtungName>beide</RichtungName>
+            <RichtungHafasId>0</RichtungHafasId>
+            <BeginnAbschnittName>Tirschenreuther Ring</BeginnAbschnittName>
+            <BeginnAbschnittHafasId>900073206</BeginnAbschnittHafasId>
+            <EndeAbschnittName>S Osdorfer Str.</EndeAbschnittName>
+            <EndeAbschnittHafasId>900064256</EndeAbschnittHafasId>
+
+            <GueltigVonDatum>2016-04-04</GueltigVonDatum>
+            <GueltigVonZeit>08:00:00</GueltigVonZeit>
+            <GueltigBisDatum>2017-09-22</GueltigBisDatum>
+            <GueltigBisZeit>14:00:00</GueltigBisZeit>
+            <Prioritaet>1</Prioritaet>
+            <IsAdhoc>true</IsAdhoc>
+            <GrundFahrplanabweichung>4</GrundFahrplanabweichung>
+            <TextIntUrsache>Sperrung wegen Straßenbauarbeiten</TextIntUrsache>
+            <TextIntAuswirkung>Die Linie wird über Waldsassener Straße, Lichterfelder Ring und Osdorfer Straße umgeleitet. Ersatzhaltestellen sind an folgenden Orten eingerichtet: Im Lichterfelder Ring an den Kreuzungsbereichen zur Waldsassener Str., zum Lechtaler Weg, zum Sarntaler Weg, zur
+                Schütte-Lanz-Straße und zum Osdorfer Weg. In der Osdorfer Straße werden die Haltestellen der Linien 186 bzw. 284 genutzt. In Richtung S Nikolassee wird die Haltestelle "Weskamstraße" der Linie M82 in der Waldsassener Str.bedient.
+            </TextIntAuswirkung>
+            <TextWAPSMSUrsache>Sperrung wegen Straßenbauarbeiten</TextWAPSMSUrsache>
+            <TextWAPSMSAuswirkung>wird über Waldsassener Straße, Lichterfelder Ring und Osdorfer Straße umgeleitet.</TextWAPSMSAuswirkung>
+        </OEV_MESSAGE>
+    </XML>
+</ANDMeldung>
