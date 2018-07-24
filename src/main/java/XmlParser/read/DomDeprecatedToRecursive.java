@@ -1,6 +1,5 @@
 package XmlParser.read;
 
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.xerces.dom.DeferredElementImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -44,11 +43,7 @@ public class DomDeprecatedToRecursive {
     public static String getNodeInfoDeprecated(Node node, String elementName) {
         Node infoNode = ((DeferredElementImpl) node).getElementsByTagName(elementName).item(0);
         if (infoNode != null) {
-            String textContent = infoNode.getTextContent();
-            return StringEscapeUtils.unescapeXml(textContent)
-                    .replaceAll("\n", "")
-                    .replace("<br/>", "")
-                    .replace("<br />", "");
+            return infoNode.getTextContent();
         }
         return null;
     }
@@ -56,24 +51,17 @@ public class DomDeprecatedToRecursive {
     public static String getNodeInfo(Node node, String elementName) {
         String result = null;
         if (node.getNodeName().equals(elementName)) {
-            result = node.getTextContent();
-            result = StringEscapeUtils.unescapeXml(result)
-                    .replaceAll("\n", "")
-                    .replace("<br/>", "")
-                    .replace("<br />", "");
-            return result;
-
+            return node.getTextContent();
         } else {
             NodeList childNodes = node.getChildNodes();
             for (int i = 0; i < childNodes.getLength(); i++) {
                 Node childNode = childNodes.item(i);
-                String content = getNodeInfo(childNode, elementName);
-                if (content != null) {
-                    result = content;
+                result = getNodeInfo(childNode, elementName);
+                if (result != null) {
                     return result;
                 }
             }
+            return result;
         }
-        return result;
     }
 }
